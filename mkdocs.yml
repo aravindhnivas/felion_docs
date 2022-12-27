@@ -1,3 +1,14 @@
 site_name: FELionGUI v4
 theme:
   name: material
+nav:
+    - Home: index.md
+    - Normline: normline.md
+    - Masspec: masspec.md
+    - Timescan: timescan.md
+    - THz: thz.md
+    - Kinetics: kinetics.md
+    - Powerfile: powerfile.md
+    - Misc: misc.md
+    
+    - Settings: seetings.md
