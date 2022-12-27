@@ -14,6 +14,7 @@ theme:
   icon:
     repo: fontawesome/brands/github
   
+  custom_dir: overrides
 
   palette:
     # # Palette toggle for automatic mode
@@ -62,7 +63,14 @@ markdown_extensions:
       generic: true
 
 extra:
-  generator: true # Made with Material for MkDocs notice
+  generator: false # Made with Material for MkDocs notice
+  social:
+    - icon: fontawesome/solid/paper-plane
+      link: mailto:aravindhnivas28+feliondocs@gmail.com
+      name: Email aravindh
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/AravindhnivasM
+      name: AravindhnivasM on Twitter
 
 extra_css:
   - stylesheets/extra.css
@@ -78,5 +86,7 @@ extra_javascript:
   - javascripts/mathjax.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-
 # edit_uri: ""
+
+copyright: Copyright &copy; 2019 - 2022 A.N. Marimuthu
+  
