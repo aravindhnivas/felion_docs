@@ -16,4 +16,4 @@ By using Tauri and Svelte together, developers can create powerful and performan
 
 ## Other technologies
 
-It would not have been possible to build this software without the usage of other open-source web technologies such as vite, rollup, and many other CSS and JS libraries.
+It would not have been possible to build this software without other open-source technologies such as [vite](https://vitejs.dev/) and [plotly](https://plotly.com/javascript/), and many other CSS and JS libraries.
