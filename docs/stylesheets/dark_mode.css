@@ -1,0 +1,6 @@
+
+@media (prefers-color-scheme: dark) {
+    .md-typeset a, .md-nav__link.md-nav__link--active {
+        color: palevioletred;
+    }
+}

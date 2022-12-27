@@ -1,9 +1,11 @@
-/* :root {
-    --md-primary-fg-color:        #EE0F0F;
-    --md-primary-fg-color--light: #ECB7B7;
-    --md-primary-fg-color--dark:  #90030C;
-} */
 .md-header__button.md-logo {
     background-color: whitesmoke;
     border-radius: 1em;
+}
+.md-typeset a, .md-nav__link.md-nav__link--active {
+    color: #4287ff;
+}
+
+.md-typeset a:hover, .md-nav__link.md-nav__link--active:hover, .md-nav__link:hover {
+    color: #4287ff;
 }
