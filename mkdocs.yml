@@ -1,8 +1,8 @@
 site_name: FELionGUI v4
-
 site_url: https://aravindhnivas.github.io/felion_docs/
 site_author: A.N. Marimuthu
-
+repo_name: aravindhnivas/felion_docs
+repo_url: https://github.com/aravindhnivas/felion_docs
 site_description: A documentation for FELionGUIv4
 site_dir: site
 
@@ -11,8 +11,11 @@ theme:
   favicon: img/favicon.ico
   logo: img/logo.png
 
+  icon:
+    repo: fontawesome/brands/github
+  
+
   palette:
-    
     # # Palette toggle for automatic mode
     # - media: "(prefers-color-scheme)"
     #   toggle:
@@ -68,8 +71,12 @@ extra_css:
 plugins:
   - search
   - glightbox
+  - git-revision-date-localized:
+      enable_creation_date: false
 
 extra_javascript:
   - javascripts/mathjax.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+# edit_uri: ""
