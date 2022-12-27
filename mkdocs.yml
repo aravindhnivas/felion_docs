@@ -13,7 +13,7 @@ theme:
 
   palette:
     
-    # Palette toggle for automatic mode
+    # # Palette toggle for automatic mode
     # - media: "(prefers-color-scheme)"
     #   toggle:
     #     icon: material/brightness-auto
@@ -53,9 +53,18 @@ markdown_extensions:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
 
+  - pymdownx.arithmatex:
+      generic: true
+
 extra_css:
   - stylesheets/extra.css
 
 plugins:
   - search
   - glightbox
+
+extra_javascript:
+
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
