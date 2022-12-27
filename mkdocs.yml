@@ -1,6 +1,16 @@
 site_name: FELionGUI v4
+
+site_url: https://aravindhnivas.github.io/felion_docs/
+site_author: A.N. Marimuthu
+site_description: A documentation for FELionGUIv4
+site_dir: site
+
 theme:
   name: material
+  favicon: img/favicon.ico
+  custom_dir: overrides
+  logo: img/logo.png
+
 nav:
     - Home: index.md
     - Normline: normline.md
@@ -10,6 +20,11 @@ nav:
     - Kinetics: kinetics.md
     - Powerfile: powerfile.md
     - Misc: misc.md
-    
     - Settings: settings.md
     - About: about.md
+
+plugins:
+  - search:
+      lang: 
+        - en
+        - du
