@@ -64,6 +64,7 @@ markdown_extensions:
       generic: true
 
 extra:
+
   generator: false # Made with Material for MkDocs notice
   social:
     - icon: fontawesome/solid/paper-plane
@@ -79,7 +80,6 @@ extra_css:
 plugins:
   - search
   - glightbox
-  
   - git-revision-date-localized:
       enable_creation_date: false
 
@@ -92,6 +92,4 @@ extra_javascript:
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
-
 copyright: Copyright &copy; 2019 - 2022 A.N. Marimuthu
-
