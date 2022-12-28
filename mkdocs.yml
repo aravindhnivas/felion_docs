@@ -40,7 +40,10 @@ theme:
 
 nav:
     - Home: index.md
-    - Normline: normline.md
+    - Layout: layout.md
+    - Normline:
+      - Create baseline: normline/baseline.md
+      - FELIX Plot: normline/felix_plot.md
     - Masspec: masspec.md
     - Timescan: timescan.md
     - THz: thz.md
@@ -55,11 +58,10 @@ nav:
 markdown_extensions:
   - attr_list
   - md_in_html
-  
+  - tables
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
-
   - pymdownx.arithmatex:
       generic: true
 
