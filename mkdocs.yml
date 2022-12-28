@@ -69,7 +69,7 @@ markdown_extensions:
       generic: true
 
 extra:
-  generator: true # Made with Material for MkDocs notice
+  generator: false # Made with Material for MkDocs notice
   social:
     - icon: fontawesome/solid/paper-plane
       link: mailto:aravindhnivas28+feliondocs@gmail.com
