@@ -1,3 +1,8 @@
+---
+hide:
+  - navigation
+---
+
 # About
 
 FELion GUI is a desktop application built using [Tauri (v1.2)](https://tauri.app) and [Svelte (v3)](https://svelte.dev) as a front-end UI/UX and [Python (v3.11)](https://python.org) as a back-end for scientific computational purpose.
