@@ -69,14 +69,14 @@ markdown_extensions:
       generic: true
 
 extra:
-  generator: false # Made with Material for MkDocs notice
+  generator: true # Made with Material for MkDocs notice
   social:
     - icon: fontawesome/solid/paper-plane
       link: mailto:aravindhnivas28+feliondocs@gmail.com
-      name: Email aravindh
+      name: Email us
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/AravindhnivasM
-      name: AravindhnivasM on Twitter
+      name: connect on Twitter
 
 extra_css:
   - stylesheets/global.css
