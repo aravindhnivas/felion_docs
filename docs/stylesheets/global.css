@@ -15,4 +15,15 @@
   border-bottom: solid 2px;
 }
 
+.md-tabs__item {
+  margin-bottom: 0.5em;
+}
+.md-tabs__item:hover {
+  background-color: whitesmoke;
+  border-radius: 1em;
+}
+.md-tabs__item:hover .md-tabs__link {
+  color: black;
+}
+
 /*# sourceMappingURL=global.css.map */

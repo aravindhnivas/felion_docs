@@ -14,3 +14,15 @@
 .md-tabs__link.md-tabs__link--active {
     border-bottom: solid 2px;
 }
+
+.md-tabs__item {
+    margin-bottom: 0.5em;
+    &:hover {
+        background-color: whitesmoke;
+        border-radius: 1em;
+
+        .md-tabs__link {
+            color: black;
+        }
+    }
+}
