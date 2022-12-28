@@ -49,7 +49,6 @@ nav:
     - Masspec: masspec.md
     - Timescan: timescan.md
     - THz: thz.md
-    # - Kinetics: kinetics.md
     - Kinetics:
       - ROSAA: kinetics/ROSAA.md
       - timescan: kinetics/timescan.md
