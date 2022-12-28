@@ -84,7 +84,7 @@ plugins:
   - glightbox
   - git-revision-date-localized:
       enable_creation_date: false
-
+  - autorefs
   # - with-pdf:
   #     cover_subtitle: Technical documentation for FELionGUI
   #     output_path: documentation.pdf
