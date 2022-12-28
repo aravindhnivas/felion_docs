@@ -83,9 +83,9 @@ plugins:
   - git-revision-date-localized:
       enable_creation_date: false
 
-  - with-pdf:
-      cover_subtitle: Technical documentation for FELionGUI
-      output_path: documentation.pdf
+  # - with-pdf:
+  #     cover_subtitle: Technical documentation for FELionGUI
+  #     output_path: documentation.pdf
 
 extra_javascript:
   - javascripts/mathjax.js
