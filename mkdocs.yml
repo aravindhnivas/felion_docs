@@ -79,8 +79,7 @@ extra:
       name: AravindhnivasM on Twitter
 
 extra_css:
-  - stylesheets/extra.css
-  - stylesheets/dark_mode.css
+  - stylesheets/global.css
 
 plugins:
   - search
