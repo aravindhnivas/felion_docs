@@ -23,7 +23,7 @@ By using Tauri and Svelte together, developers can create powerful and performan
 
 ### Other technologies
 
-It would not have been possible to build this software without other :material-scale-balance:{ .lg .middle } __Open Source__ technologies such as [vite](https://vitejs.dev/) and [plotly](https://plotly.com/javascript/), and many other CSS and JS libraries.
+It would not have been possible to build this software without other :material-scale-balance:{ .lg .middle } __Open Source__ technologies such as [vite](https://vitejs.dev/){:target="_blank"} and [plotly](https://plotly.com/javascript/){:target="_blank"}, and many other CSS and JS libraries.
 
 ## Back-end
 
