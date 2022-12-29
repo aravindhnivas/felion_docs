@@ -1,4 +1,5 @@
 mkdocs-material
 mkdocs-git-revision-date-localized-plugin
 mkdocs-glightbox
-mkdocs-autorefs
+mkdocs-autolinks-plugin
+mkdocs-mermaid2-plugin
