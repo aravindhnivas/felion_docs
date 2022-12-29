@@ -19,10 +19,10 @@ theme:
   palette:
 
     # Palette toggle for automatic mode
-    - media: "(prefers-color-scheme)"
-      toggle:
-        icon: material/brightness-auto
-        name: Switch to light mode
+    # - media: "(prefers-color-scheme)"
+    #   toggle:
+    #     icon: material/brightness-auto
+    #     name: Switch to light mode
 
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
@@ -95,7 +95,12 @@ plugins:
       enable_creation_date: false
 
   - autolinks
-  - mermaid2
+  - mermaid2:
+      arguments:
+        theme: |
+            ^(JSON.parse(__md_get("__palette").index == 1)) ? 'dark' : 'light'
+        # theme: |
+        #     ^(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light'
 
   # - with-pdf:
   #     cover_subtitle: Technical documentation for FELionGUI
@@ -103,6 +108,7 @@ plugins:
 
 extra_javascript:
   - javascripts/mathjax.js
+  - javascripts/refresh_on_toggle_dark_light.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
   - https://unpkg.com/mermaid/dist/mermaid.min.js
