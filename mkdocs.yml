@@ -46,23 +46,23 @@ theme:
     - search.suggest
 
 nav:
-    - Home: index.md
-    - Layout: layout.md
+    - index.md
+    - layout.md
     - Normline:
-      - Create baseline: normline/baseline.md
-      - FELIX Plot: normline/felix_plot.md
-      - OPO Plot: normline/opo_plot.md
-      - Theory Plot: normline/theory_plot.md
-    - Masspec: masspec.md
-    - Timescan: timescan.md
-    - THz: thz.md
+      - normline/baseline.md
+      - normline/felix_plot.md
+      - normline/opo_plot.md
+      - normline/theory_plot.md
+    - masspec.md
+    - timescan.md
+    - thz.md
     - Kinetics:
-      - ROSAA: kinetics/ROSAA.md
-      - timescan: kinetics/timescan.md
-    - Powerfile: powerfile.md
-    - Misc: misc.md
-    - Settings: settings.md
-    - About: about.md
+      - kinetics/ROSAA.md
+      - kinetics/timescan.md
+    - powerfile.md
+    - misc.md
+    - settings.md
+    - about.md
     
 markdown_extensions:
   - attr_list
@@ -93,7 +93,6 @@ plugins:
   - glightbox
   - git-revision-date-localized:
       enable_creation_date: false
-
   - autolinks
   - mermaid2:
       arguments:
