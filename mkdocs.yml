@@ -1,8 +1,8 @@
 site_name: FELionGUI v4
 site_url: https://aravindhnivas.github.io/felion_docs/
 site_author: A.N. Marimuthu
-repo_name: aravindhnivas/felion_gui_v4
-repo_url: https://github.com/aravindhnivas/felion_gui_v4
+repo_name: aravindhnivas/felion_docs
+repo_url: https://github.com/aravindhnivas/felion_docs
 site_description: A documentation for FELionGUI
 site_dir: site
 
