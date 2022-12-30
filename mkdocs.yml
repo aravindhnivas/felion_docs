@@ -13,9 +13,14 @@ theme:
   
   icon:
     repo: fontawesome/brands/github
-  
   custom_dir: overrides
-
+  features:
+    - navigation.top
+    - navigation.instant
+    - navigation.tabs
+    - search.share
+    - search.suggest
+    
   palette:
 
     # Palette toggle for automatic mode
@@ -38,22 +43,10 @@ theme:
         icon: material/brightness-4
         name: Switch to system preference
 
-  features:
-    - navigation.top
-    # - navigation.instant
-    - navigation.tabs
-    - search.share
-    - search.suggest
-
 nav:
     - index.md
     - layout.md
     - normline.md
-    # - Normline:
-    #   - normline/baseline.md
-    #   - normline/felix_plot.md
-    #   - normline/opo_plot.md
-    #   - normline/theory_plot.md
     - masspec.md
     - timescan.md
     - thz.md
@@ -74,6 +67,12 @@ markdown_extensions:
       emoji_generator: !!python/name:materialx.emoji.to_svg
   - pymdownx.arithmatex:
       generic: true
+  
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
 
 extra:
 
@@ -95,12 +94,6 @@ plugins:
   - git-revision-date-localized:
       enable_creation_date: false
   - autolinks
-  - mermaid2:
-      arguments:
-        theme: |
-            ^(JSON.parse(__md_get("__palette").index == 1)) ? 'dark' : 'light'
-        # theme: |
-        #     ^(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light'
 
   # - with-pdf:
   #     cover_subtitle: Technical documentation for FELionGUI
@@ -108,9 +101,7 @@ plugins:
 
 extra_javascript:
   - javascripts/mathjax.js
-  - javascripts/refresh_on_toggle_dark_light.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-  - https://unpkg.com/mermaid/dist/mermaid.min.js
 
 copyright: Copyright &copy; 2019 - 2022 A.N. Marimuthu
