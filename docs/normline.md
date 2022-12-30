@@ -5,7 +5,31 @@ hide:
 
 # Normline
 
-## Folder structure
+## Functions
+
+### Create baseline
+
+Creating baseline for felix or opo IR spectrum
+
+### FELIX plot
+
+```mermaid
+graph LR
+  baseline[Create baseline] --> felix[FELIX plot] --> post-process
+```
+
+### OPO plot
+
+```mermaid
+graph LR
+  opomode[OPO MODE] --> baseline[Create baseline] --> opo[OPO plot] --> post-process
+```
+
+### Theory plot
+
+## Descriptions
+
+### Folder structure
 
 ```mermaid
 graph TD
@@ -27,40 +51,20 @@ graph TD
 
 ```
 
-## Data types
+### Data types
 
 | Name | Description | Data source |
 | --- | --- | --- |
 | __FELIX__
 | .felix   | FELIX IR data | Instrument (Labview) |
-| .pow     | powerfile for felix | Manual |
-| .base    | baseline for felix | Manual |
+| .pow     | powerfile for felix | created manually (by hand) |
+| .base    | baseline for felix | created manually (FELionGUI) |
 | __OPO__
 | .ofelix  | OPO IR data | Instrument (Labview) |
-| .cfelix  | corrected felix | Manual |
-| .cbase   | baseline for OPO | Manual |
-| .cofelix | corrected ofelix | Manual |
+| .cfelix  | corrected felix | created manually (FELionGUI) |
+| .cbase   | baseline for OPO | created manually (FELionGUI) |
+| .cofelix | corrected ofelix | created manually (FELionGUI) |
 | __Post-processed__
-| .dat    | processed .*felix data | Manual |
-| .expfit | Gaussian fit parameters | Manual |
-| .fullfit | Multi-Gaussian fit parameters | Manual |
-
-## Create baseline
-
-Creating baseline for felix or opo IR spectrum
-
-## FELIX plot
-
-```mermaid
-graph LR
-  baseline[Create baseline] --> felix[FELIX plot] --> post-process
-```
-
-## OPO plot
-
-```mermaid
-graph LR
-  opomode[OPO MODE] --> baseline[Create baseline] --> opo[OPO plot] --> post-process
-```
-
-## Theory plot
+| .dat    | processed .*felix data | created manually (FELionGUI) |
+| .expfit | Gaussian fit parameters | created manually (FELionGUI) |
+| .fullfit | Multi-Gaussian fit parameters | created manually (FELionGUI) |
