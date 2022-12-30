@@ -2,4 +2,4 @@ mkdocs-material
 mkdocs-git-revision-date-localized-plugin
 mkdocs-glightbox
 mkdocs-autolinks-plugin
-mkdocs-mermaid2-plugin
+pymdown-extensions
