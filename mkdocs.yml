@@ -48,11 +48,12 @@ theme:
 nav:
     - index.md
     - layout.md
-    - Normline:
-      - normline/baseline.md
-      - normline/felix_plot.md
-      - normline/opo_plot.md
-      - normline/theory_plot.md
+    - normline.md
+    # - Normline:
+    #   - normline/baseline.md
+    #   - normline/felix_plot.md
+    #   - normline/opo_plot.md
+    #   - normline/theory_plot.md
     - masspec.md
     - timescan.md
     - thz.md
