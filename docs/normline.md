@@ -57,11 +57,11 @@ graph TD
 | --- | --- | --- |
 | __FELIX__
 | .felix   | FELIX IR data | Instrument (Labview) |
-| .pow     | powerfile for felix | created manually (by hand) |
+| .cfelix  | corrected felix | created manually (FELionGUI) |
+| .pow     | powerfile for felix | created manually (FELionGUI) |
 | .base    | baseline for felix | created manually (FELionGUI) |
 | __OPO__
 | .ofelix  | OPO IR data | Instrument (Labview) |
-| .cfelix  | corrected felix | created manually (FELionGUI) |
 | .cbase   | baseline for OPO | created manually (FELionGUI) |
 | .cofelix | corrected ofelix | created manually (FELionGUI) |
 | __Post-processed__
