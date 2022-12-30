@@ -5,31 +5,45 @@ hide:
 
 # Normline
 
-## Data structure
+## Folder structure
 
 ```mermaid
 graph TD
     Parent[parent-folder]
 
-    Parent --> A
-    Parent --> B
-    Parent --> C
-
-    A[DATA]
-    B[EXPORT]
-    C[OUT]
+    Parent --> DATA
+    Parent --> EXPORT
+    Parent --> OUT
     
-    A --> felix[.felix, .cfelix, .ofelix or .cofelix]
-    A --> .pow
-    A --> .base
+    DATA --> felix[.felix, .cfelix, .ofelix or .cofelix]
+    DATA --> .pow
+    DATA --> .base
 
-    B --> .dat
+    EXPORT --> .dat
 
-    C --> .expfit
-    C --> .fullfit
-    C --> other[.png, .pdf, etc]
+    OUT --> .expfit
+    OUT --> .fullfit
+    OUT --> other[.png, .pdf, etc]
 
 ```
+
+## Data types
+
+| Name | Description | Data source |
+| --- | --- | --- |
+| __FELIX__
+| .felix   | FELIX IR data | Instrument (Labview) |
+| .pow     | powerfile for felix | Manual |
+| .base    | baseline for felix | Manual |
+| __OPO__
+| .ofelix  | OPO IR data | Instrument (Labview) |
+| .cfelix  | corrected felix | Manual |
+| .cbase   | baseline for OPO | Manual |
+| .cofelix | corrected ofelix | Manual |
+| __Post-processed__
+| .dat    | processed .*felix data | Manual |
+| .expfit | Gaussian fit parameters | Manual |
+| .fullfit | Multi-Gaussian fit parameters | Manual |
 
 ## Create baseline
 
