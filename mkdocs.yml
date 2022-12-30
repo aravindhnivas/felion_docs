@@ -74,6 +74,13 @@ markdown_extensions:
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
 
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true 
+  - pymdownx.tilde
+  - pymdownx.magiclink
+  - pymdownx.keys
+  
 extra:
 
   generator: true # Made with Material for MkDocs notice
