@@ -2,34 +2,14 @@
 hide:
   - navigation
 ---
-
 # Normline
 
-## Functions
+Normline is the page where analysis of FELIX and OPO infrared data are processed such as baseline correction, wavelength and power calibration
+In addition, one can do post-processing such as Gaussian and Multi-Gaussian line profile fitting fitting of experimental data to derive line parameters (FWHM, $\sigma$ and amplitude).
 
-### Create baseline
+Before proceeding further, let us familirise with different data folder structure and processed and post-processed data types for FELIX and OPO IR data.
 
-Creating baseline for felix or opo IR spectrum
-
-### FELIX plot
-
-```mermaid
-graph LR
-  baseline[Create baseline] --> felix[FELIX plot] --> post-process
-```
-
-### OPO plot
-
-```mermaid
-graph LR
-  opomode[OPO MODE] --> baseline[Create baseline] --> opo[OPO plot] --> post-process
-```
-
-### Theory plot
-
-## Descriptions
-
-### Folder structure
+## Folder structure
 
 ```mermaid
 graph TD
@@ -39,7 +19,7 @@ graph TD
     Parent --> EXPORT
     Parent --> OUT
     
-    DATA --> felix[.felix, .cfelix, .ofelix or .cofelix]
+    DATA --> felix[.*felix]
     DATA --> .pow
     DATA --> .base
 
@@ -51,7 +31,10 @@ graph TD
 
 ```
 
-### Data types
+???+ note
+    .*felix indicates any of the following: .felix, .ofelix, .cfelix or .cofelix file
+
+## Data types
 
 | Name | Description | Data source |
 | --- | --- | --- |
@@ -68,3 +51,57 @@ graph TD
 | .dat    | processed .*felix data | created manually (FELionGUI) |
 | .expfit | Gaussian fit parameters | created manually (FELionGUI) |
 | .fullfit | Multi-Gaussian fit parameters | created manually (FELionGUI) |
+
+## Functions
+
+### Create baseline
+
+Creating baseline for felix or opo IR spectrum
+
+The procedure of processing the data are as given below in flowchart:
+
+```mermaid
+graph LR
+  baseline[Create baseline] --> data[FELIX or OPO plot] --> post[Post processing]
+```
+
+As shown in above flowchart, the first step is to create a baseline
+
+???+ info
+    The measured .*felix file is copied into a folder (called parent folder as mentioned in above flowchart) followed by baseline creation `Create baseline`.
+    If the parent folder is empty the following directories `DATA`, `EXPORT` and `OUT` are automatically generated and the copied .felix or .ofelix files are copied into the `DATA` folder.
+
+<figure markdown>
+  ![Image title](assets/images/normline/felion-docs-normline_buttons.png){ align=left }
+  <figcaption>Fig 3: Normline: Main functions (in default mode, i.e., FELIX mode)</figcaption>
+</figure>
+
+???+ info
+    Normally files are selected by mouse `left-click`. However, to select a file for creating baseline one has to do `ctrl` + `left-click`.
+    As shown in Fig 3, selected files are indicated by :fontawesome-regular-square-check: and the selected file for baseline correction has a solid orange coloured border.
+
+???+ note
+    If the `parent-folder` is empty and this is the first time you are processing the file, then after baseline creation you should refresh (:material-refresh:) and move into `DATA` folder.
+
+### FELIX plot
+
+```mermaid
+graph LR
+  baseline[Create baseline] --> felix[FELIX plot] --> post-process
+```
+
+As shown above, once baseline is created click on `FELIX plot` button to analysis FELIX IR data (from .felix file).
+
+<figure markdown>
+  ![Image title](assets/images/normline/felion-docs-normline_felix-plots.png){ align=left }
+  <figcaption>Fig 4: Normline: Main functions (in default mode, i.e., FELIX mode)</figcaption>
+</figure>
+
+### OPO plot
+
+```mermaid
+graph LR
+  opomode[OPO MODE] --> baseline[Create baseline] --> opo[OPO plot] --> post-process
+```
+
+### Theory plot
