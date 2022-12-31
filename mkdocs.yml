@@ -20,6 +20,7 @@ theme:
     - navigation.tabs
     - search.share
     - search.suggest
+    # - announce.dismiss
     
   palette:
 
