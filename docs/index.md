@@ -4,9 +4,6 @@ hide:
   - toc
 ---
 
-???+ warning
-    This documentation is still under construction. Not all features are covered in detail yet.
-
 # Introduction
 
 FELionGUI is a spectrum analysis application designed specifically for use with the FELion instrument at the FELIX labaratory ([Dr. Sandra Brünken](https://www.bruenken.de/){:target="_blank"} group) , Radboud University in Nijmegen.
