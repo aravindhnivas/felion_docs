@@ -3,6 +3,10 @@ hide:
   - navigation
 ---
 
+# Masspec
+
+Lorem ipsum[^1] dolor sit amet, consectetur adipiscing elit.[^2]
+
 === "Tab 1"
     Markdown **content**.
 
@@ -28,3 +32,9 @@ text~a\ subscript~
 ~~Delete me~~
 
 $p(x|y) = \frac{p(y|x)p(x)}{p(y)}$, \(p(x|y) = \frac{p(y|x)p(x)}{p(y)}\).
+
+[^1]: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+[^2]:
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+    massa, nec semper lorem quam in massa.
