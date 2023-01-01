@@ -18,6 +18,13 @@ CH~3~CH~2~OH
 
 text~a\ subscript~
 
+- H~2~O
+- A^T^A
+
+==mark me==
+
+==smart==mark==
+
 ~~Delete me~~
 
 $p(x|y) = \frac{p(y|x)p(x)}{p(y)}$, \(p(x|y) = \frac{p(y|x)p(x)}{p(y)}\).
