@@ -52,6 +52,6 @@ The `main-container` on the right takes up the remainder of the screen. The top 
 | :material-eye-outline: and :material-eye-off-outline: | toggle the visibility of labelled column from displaying |
 | :octicons-tools-16: | pop-up modal with special elements which depends on selected page |
 
-After the `icon-buttons` row, the next immediate row usually display additional information such as the location address, which shows the path to the current directory, and browse location buttons, which allow the user to navigate to different parts of the file system. This row is followed by additional row(s) depends on current active page. This entire collection of top row is referred as [`initial-button-rows`](#initial-button-rows).
+After the `icon-buttons` row, the next immediate row usually display additional information such as the location address, which shows the path to the current directory, and browse location buttons, which allow the user to navigate to different parts of the file system. This row is followed by additional row(s) depends on current active page. This entire collection of top row is referred as `initial-button-rows`.
 
 Following `initial-button-rows`, the rest of the space of the  `main-container` include a display area for the selected file, controls for interacting with the plotted file data, and output areas for displaying the results of the processing or post-processing graph plots.

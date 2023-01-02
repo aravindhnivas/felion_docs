@@ -52,7 +52,7 @@ graph TD
 | .expfit | Gaussian fit parameters | created manually (FELionGUI) |
 | .fullfit | Multi-Gaussian fit parameters | created manually (FELionGUI) |
 
-## Functions
+## Step-by-step procedure
 
 ### Create baseline
 
@@ -83,25 +83,41 @@ As shown in above flowchart, the first step is to create a baseline
 ???+ note
     If the `parent-folder` is empty and this is the first time you are processing the file, then after baseline creation you should refresh (:material-refresh:) and move into `DATA` folder.
 
-### FELIX plot
+<figure markdown>
+  ![Image title](assets/images/normline/baseline.png){ align=left }
+  <figcaption>Fig 4: Baseline creation</figcaption>
+</figure>
+
+### FELIX
+
+#### Powerfile
+
+Create powerfile (.pow) for corresponding (.felix) file
+
+<figure markdown>
+  ![Image title](assets/images/normline/powerfile.jpeg){ align=left }
+  <figcaption>Fig 4: Baseline creation</figcaption>
+</figure>
+
+#### FELIX plot
 
 ```mermaid
 graph LR
-  baseline[Create baseline] --> felix[FELIX plot] --> post-process
+  baseline[Create baseline] --> powerfile --> felix[FELIX plot] --> post-process
 ```
 
 As shown above, once baseline is created click on `FELIX plot` button to analysis FELIX IR data (from .felix file).
 
 <figure markdown>
   ![Image title](assets/images/normline/felion-docs-normline_felix-plots.png){ align=left }
-  <figcaption>Fig 4: Normline: Main functions (in default mode, i.e., FELIX mode)</figcaption>
+  <figcaption>Fig 5: Normline: FELIX plot analysis</figcaption>
 </figure>
 
-### OPO plot
+### OPO
 
 ```mermaid
 graph LR
   opomode[OPO MODE] --> baseline[Create baseline] --> opo[OPO plot] --> post-process
 ```
 
-### Theory plot
+### Theory
