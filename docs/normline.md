@@ -88,6 +88,23 @@ As shown in above flowchart, the first step is to create a baseline
   <figcaption>Fig 4: Baseline creation</figcaption>
 </figure>
 
+???+ note
+    As shown in Fig 4, the red coloured line is th measured FELIX data.
+    While the blue coloured line corresponds to baseline which can be adjusted by dragging the solid-squared-blue-box.
+
+The baseline is basicallya cubic spline extraploation w.r.t solid-squared-blue-box.
+The solid-squared-blue-box  can be added or deleted, and the measured data (red coloured) can also be deleted and saved as a corrected felix file (.cfelix).
+
+The addition and deletion can be applied when mouse is hovered over the region of interest followed by keyboard keys as shown in Table below.
+
+| keys | description |
+| --- | --- |
+| `a` | add solid-squared-blue-box point |
+| `d` | delete solid-squared-blue-box point |
+| `x` | delete measured-data point |
+| `z` | undo deleted measured-data point |
+| `r` | redo deleted measured-data point |
+
 ### FELIX
 
 #### Powerfile
@@ -96,7 +113,7 @@ Create powerfile (.pow) for corresponding (.felix) file
 
 <figure markdown>
   ![Image title](assets/images/normline/powerfile.jpeg){ align=left }
-  <figcaption>Fig 4: Baseline creation</figcaption>
+  <figcaption>Fig 4: Powerfile creation</figcaption>
 </figure>
 
 #### FELIX plot
@@ -110,7 +127,7 @@ As shown above, once baseline is created click on `FELIX plot` button to analysi
 
 <figure markdown>
   ![Image title](assets/images/normline/felion-docs-normline_felix-plots.png){ align=left }
-  <figcaption>Fig 5: Normline: FELIX plot analysis</figcaption>
+  <figcaption>Fig 5: FELIX plot analysis (top to bottom : baseline corrected, power and wavelength calibrated, and final normalised data )</figcaption>
 </figure>
 
 ### OPO
