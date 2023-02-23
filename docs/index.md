@@ -24,7 +24,7 @@ The installation is very simple. Just download the appropriate installer for you
 ???+ note
     The application will download `felionpy` assets (i.e., python files for running the application). So, make sure you have an active internet connection.
 
-For macOS and Linux, follow the addition instruction below.
+Follow the addition instruction below for your operating system.
 
 === "windows"
 

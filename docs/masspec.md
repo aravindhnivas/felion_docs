@@ -5,36 +5,37 @@ hide:
 
 # Masspec
 
-Lorem ipsum[^1] dolor sit amet, consectetur adipiscing elit.[^2]
+Masspec is used to analyze mass spectra obtained from the FELion instrument.
+???+ note
+    The mass spectra are saved in the `.mass` file format.
 
-=== "Tab 1"
-    Markdown **content**.
+So just select the `.mass` file and it automatically loads the spectrum.
 
-    Multiple paragraphs.
+<figure markdown>
+  ![Image title](assets/images/masspec/masspec.jpeg){ align=left }
+  <figcaption>Fig 6: Mass spectrum of two selected file</figcaption>
+</figure>
 
-=== "Tab 2"
-    More Markdown **content**.
+## Labview Settings
 
-    - list item a
-    - list item b
+The `GetLabviewSettings` button is used to get the settings from the Labview software.
+The settings are saved in the `.mass` file in itself at the end.
 
-CH~3~CH~2~OH
+<figure markdown>
+  ![Image title](assets/images/masspec/felion_docs_labview%20seetings.png){ align=left }
+  <figcaption>Fig 7: Labview settings for the selected file</figcaption>
+</figure>
 
-text~a\ subscript~
+## Production-quality plots
 
-- H~2~O
-- A^T^A
+The `Open in matplotlib` button is used to plot the mass spectrum in `matplotlib` and save it in a high-resolution image file.
 
-==mark me==
+<figure markdown>
+  ![Image title](assets/images/masspec/felion_docs_masspec%20matplotlib.png){ align=left }
+  <figcaption>Fig 8: High quality masspec figure</figcaption>
+</figure>
 
-==smart==mark==
-
-~~Delete me~~
-
-$p(x|y) = \frac{p(y|x)p(x)}{p(y)}$, \(p(x|y) = \frac{p(y|x)p(x)}{p(y)}\).
-
-[^1]: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-[^2]:
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
-    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
-    massa, nec semper lorem quam in massa.
+<figure markdown>
+  ![Image title](assets/images/masspec/felion_docs-fig-controller.png){ align=left }
+  <figcaption>Fig 9: Figure controller</figcaption>
+</figure>

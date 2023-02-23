@@ -54,7 +54,7 @@ nav:
     - Kinetics:
       - kinetics/ROSAA.md
       - kinetics/timescan.md
-    - powerfile.md
+    # - powerfile.md
     - misc.md
     - settings.md
     - about.md
