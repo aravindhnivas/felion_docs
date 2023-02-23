@@ -16,7 +16,7 @@ theme:
   custom_dir: overrides
   features:
     - navigation.top
-    - navigation.instant
+    # - navigation.instant
     - navigation.tabs
     - search.share
     - search.suggest

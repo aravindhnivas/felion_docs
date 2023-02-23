@@ -9,7 +9,7 @@ FELionGUI is a spectrum analysis application designed specifically for use with 
 
 The software is developed by [A.N. Marimuthu](https://github.com/aravindhnivas){:target="_blank"}. It provides a user-friendly interface for analyzing spectra obtained from the FELion instrument.
 
-## Download `feliongui` <span id='version'></span>
+## Download `feliongui`
 
 <!-- Latest version:  -->
 

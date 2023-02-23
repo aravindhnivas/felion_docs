@@ -3,15 +3,18 @@ const init = async () => {
     const URL = "https://api.github.com/repos/aravindhnivas/felion_gui_v4/releases/latest"
     const data = await fetch(URL, {method: "GET"})
     jsonData = await data.json()
-    document.getElementById('version').textContent = jsonData.tag_name
+
+    const versionTag = document.getElementById("version-tag")
+    if(!versionTag) return
+
+    versionTag.textContent = jsonData.tag_name
 }
 
-init().then(() => {
-    console.log("github api called")
-    const versionInfoDivs = Array.from(document.getElementsByClassName("version-info"))
-    versionInfoDivs.forEach(element =>{element.textContent = jsonData.tag_name.replace('v', '')})
-}).catch((err) => {console.error(err)})
-
+// init().then(() => {
+//     console.log("github api called")
+//     const versionInfoDivs = Array.from(document.getElementsByClassName("version-info"))
+//     versionInfoDivs.forEach(element =>{element.textContent = jsonData.tag_name.replace('v', '')})
+// }).catch((err) => {console.error(err)})
 
 const getURLs = async () => {
     
@@ -28,9 +31,9 @@ const getURLs = async () => {
 
 const downloadBtn = document.getElementsByClassName("download-btn")
 Array.from(downloadBtn).forEach(element => {
-    element.addEventListener("click", async (e) => {
+    element.onclick =  async (e) => {
         e.preventDefault();
-        console.log("clicked")
+        // console.log("clicked")
         const {winURL, dmgURL, appImageURL} = await getURLs()
         if(element.classList.contains('windows')) {
             window.location.href = winURL
@@ -39,6 +42,5 @@ Array.from(downloadBtn).forEach(element => {
         } else {
             window.location.href = appImageURL
         }
-
-    })
+    }
 });
