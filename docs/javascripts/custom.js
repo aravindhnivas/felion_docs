@@ -1,10 +1,25 @@
-const getURLs = async () => {
+let jsonData = null // global variable to store the json data
+const init = async () => {
     const URL = "https://api.github.com/repos/aravindhnivas/felion_gui_v4/releases/latest"
     const data = await fetch(URL, {method: "GET"})
-    const json = await data.json()
-    const winAsset = json.assets.find(asset => asset.name.endsWith(".msi"))
-    const dmgAsset = json.assets.find(asset => asset.name.endsWith(".dmg"))
-    const appImageAsset = json.assets.find(asset => asset.name.endsWith(".AppImage"))
+    jsonData = await data.json()
+    document.getElementById('version').textContent = jsonData.tag_name
+}
+
+init().then(() => {
+    console.log("github api called")
+    const versionInfoDivs = Array.from(document.getElementsByClassName("version-info"))
+    versionInfoDivs.forEach(element =>{element.textContent = jsonData.tag_name.replace('v', '')})
+}).catch((err) => {console.error(err)})
+
+
+const getURLs = async () => {
+    
+    if(!jsonData) await init()
+
+    const winAsset = jsonData.assets.find(asset => asset.name.endsWith(".msi"))
+    const dmgAsset = jsonData.assets.find(asset => asset.name.endsWith(".dmg"))
+    const appImageAsset = jsonData.assets.find(asset => asset.name.endsWith(".AppImage"))
     const winURL = winAsset.browser_download_url    
     const dmgURL = dmgAsset.browser_download_url    
     const appImageURL = appImageAsset.browser_download_url

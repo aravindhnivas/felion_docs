@@ -9,7 +9,9 @@ FELionGUI is a spectrum analysis application designed specifically for use with 
 
 The software is developed by [A.N. Marimuthu](https://github.com/aravindhnivas){:target="_blank"}. It provides a user-friendly interface for analyzing spectra obtained from the FELion instrument.
 
-## Download `feliongui`
+## Download `feliongui` <span id='version'></span>
+
+<!-- Latest version:  -->
 
 [:simple-windows: Windows (x86_64)](#){ .md-button #download-btn-win .download-btn .windows}
 [:simple-apple: macOS (x86_64)](#){ .md-button #download-btn-macos .download-btn .macos}
@@ -24,31 +26,45 @@ The installation is very simple. Just download the appropriate installer for you
 
 For macOS and Linux, follow the addition instruction below.
 
-### macOS
+=== "windows"
 
-- Download the installer (`.dmg` file) from the link above.
-- Drag the downloaded `.dmg` file to the `Desktop` folder.
+    - Download the installer (`.msi` file) from the link above.
+    - Run the installer.
+    - After the installation is complete, you can find the application in the `Start Menu` and `Desktop` icon.
 
-???+ warning
-    Dragging the downloaded `.dmg` file to the `Applications` folder is not working.
+    ???+ note
+        The application by default is blocked by Windows.
+        So you need to grant an exception for a blocked app by clicking the More Info button in the Windows Security dialog box.
+        Then click the Run Anyway button.
 
-???+ note
-    The application by default is blocked by macOS.
-    So you need to grant an exception for a blocked app by clicking the Open Anyway button in Privacy & Security settings.
-    This button is available for about an hour after you try to open the app.
-    To change which apps can open on your Mac, choose Apple menu :simple-apple:  > System Settings, click Privacy & Security  in the sidebar, then go to Security. (You may need to scroll down.)
+    ???+ note
+        The installer will install the application in the `Program Files` folder. So, you need to grant administrator privileges to the installer.
 
-### Linux
+=== "macOS"
 
-The `.appimage` file is a portable application that can be run on any Linux distribution. However, you will need to make the file executable before running it. To do this, open a terminal and run the following command:
+    - Download the installer (`.dmg` file) from the link above.
+    - Drag the downloaded `.dmg` file to the `Desktop` folder.
 
-```bash title="Make the file executable"  
-chmod +x feliongui_<replace here your version number>_amd64.AppImage
-```
+    ???+ warning
+        Dragging the downloaded `.dmg` file to the `Applications` folder is not working.
+
+    ???+ note
+        The application by default is blocked by macOS.
+        So you need to grant an exception for a blocked app by clicking the Open Anyway button in Privacy & Security settings.
+        This button is available for about an hour after you try to open the app.
+        To change which apps can open on your Mac, choose Apple menu :simple-apple:  > System Settings, click Privacy & Security  in the sidebar, then go to Security. (You may need to scroll down.)
+
+=== "Linux"
+
+    The `.appimage` file is a portable application that can be run on any Linux distribution. However, you will need to make the file executable before running it. To do this, open a terminal and run the following command:
+
+    ```bash title="Make the file executable"  
+    chmod +x feliongui_<replace here your version number>_amd64.AppImage
+    ```
 
 ## Home Screen
 
 <figure markdown>
   ![Image title](assets/images/app/home.png){ align=left }
-  <figcaption>Fig 1: The FELion GUI v4 - Home Screen</figcaption>
+  <figcaption>Fig 1: The feliongui v4 - Home Screen</figcaption>
 </figure>
