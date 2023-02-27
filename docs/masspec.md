@@ -6,7 +6,7 @@ hide:
 # Masspec
 
 Masspec is used to analyze mass spectra obtained from the FELion instrument.
-???+ note
+???+ note "file format"
     The mass spectra are saved in the `.mass` file format.
 
 So just select the `.mass` file and it automatically loads the spectrum.

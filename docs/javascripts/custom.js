@@ -16,6 +16,11 @@ const data_types = {
     }
 }
 
+const versions = {
+    feliongui: '',
+    felionpy: ''
+}
+
 const OS = ["win", "darwin", "linux"]
 
 const init = async () => {
@@ -27,6 +32,12 @@ const init = async () => {
         if(download.length < 1) continue
         
         await set_url_and_size(key)
+
+        const version_span = document.getElementById(key + "-version")
+        if(version_span) version_span.textContent = `${key} ${versions[key]}`
+
+        // const version_ele_class = Array.from(document.getElementsByClassName(key + "-version"))
+        // if(version_ele_class.length > 0) version_ele_class.forEach(ele => ele.textContent = `${key} ${versions[key]}`)
         
         OS.forEach(os => {
             const span = document.getElementById(`${key}-${os}`)
@@ -53,6 +64,8 @@ const set_url_and_size = async (key = 'feliongui') => {
     const URL = URLs[key]
     const data = await fetch(URL, {method: "GET"})
     const json = await data.json()
+
+    versions[key] = json.tag_name
     
     const win_asset = json.assets.find(asset => asset.name.endsWith(data_types[key].win.endsWith))
     const dmg_asset = json.assets.find(asset => asset.name.endsWith(data_types[key].darwin.endsWith))

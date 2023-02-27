@@ -5,7 +5,7 @@ repo_name: aravindhnivas/felion_docs
 repo_url: https://github.com/aravindhnivas/felion_docs
 site_description: A documentation for FELionGUI
 site_dir: site
-
+use_directory_urls: False
 theme:
   name: material
   favicon: img/favicon.ico

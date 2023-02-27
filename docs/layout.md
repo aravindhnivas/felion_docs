@@ -26,7 +26,7 @@ The icons as shown in top-row of `file-browser` describes the following:
 | :material-select-all: | select all files  |
 | :octicons-search-24:  | search to filter files  |
 
-???+ info
+???+ info "File types"
     The `file-browser` only shows `file-types` corresponding to the current page and not all files available in the current location.
 
 #### File types

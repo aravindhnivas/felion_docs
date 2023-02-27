@@ -9,7 +9,7 @@ FELionGUI is a spectrum analysis application designed specifically for use with 
 
 The software is developed by [A.N. Marimuthu](https://github.com/aravindhnivas){:target="_blank"}. It provides a user-friendly interface for analyzing spectra obtained from the FELion instrument.
 
-## Download `feliongui`
+## Download <code id='feliongui-version'></code>
 
 `feliongui` is available for Windows, macOS, and Linux. You can download the installer for your operating system from the link below.
 
@@ -24,7 +24,7 @@ Optionally, you can download the `felionpy` python assets as shown below.
     The download will happen automatically when you run the application for the first time.
     So, make sure you have an active internet connection.
 
-## Download `felionpy` (optional)
+## Download <code id='felionpy-version'></code> (optional)
 
 If you want to download the `felionpy` assets manually, you can download it from the link below.
 
@@ -44,23 +44,20 @@ Follow the addition instruction below for your operating system.
     - Run the installer.
     - After the installation is complete, you can find the application in the `Start Menu` and `Desktop` icon.
 
-    ???+ note
+    ???+ note "Granting security exception"
         The application by default is blocked by Windows.
         So you need to grant an exception for a blocked app by clicking the More Info button in the Windows Security dialog box.
         Then click the Run Anyway button.
-
-    ???+ note
-        The installer will install the application in the `Program Files` folder. So, you need to grant administrator privileges to the installer.
 
 === "macOS"
 
     - Download the installer (`.dmg` file) from the link above.
     - Drag the downloaded `.dmg` file to the `Desktop` folder.
 
-    ???+ warning
+    ???+ warning "Installing in a Application folder"
         Dragging the downloaded `.dmg` file to the `Applications` folder is not working.
 
-    ???+ note
+    ???+ note "Granting security exception"
         The application by default is blocked by macOS.
         So you need to grant an exception for a blocked app by clicking the Open Anyway button in Privacy & Security settings.
         This button is available for about an hour after you try to open the app.

@@ -31,7 +31,7 @@ graph TD
 
 ```
 
-???+ note
+???+ note "file types"
     .*felix indicates any of the following: .felix, .ofelix, .cfelix or .cofelix file
 
 ## Data types
@@ -67,7 +67,7 @@ graph LR
 
 As shown in above flowchart, the first step is to create a baseline
 
-???+ info
+???+ info "Initial steps"
     The measured .*felix file is copied into a folder (called parent folder as mentioned in above flowchart) followed by baseline creation `Create baseline`.
     If the parent folder is empty the following directories `DATA`, `EXPORT` and `OUT` are automatically generated and the copied .felix or .ofelix files are copied into the `DATA` folder.
 
@@ -76,11 +76,11 @@ As shown in above flowchart, the first step is to create a baseline
   <figcaption>Fig 3: Normline: Main functions (in default mode, i.e., FELIX mode)</figcaption>
 </figure>
 
-???+ info
+???+ info "Baseline file selection"
     Normally files are selected by mouse `left-click`. However, to select a file for creating baseline one has to do `ctrl` + `left-click`.
     As shown in Fig 3, selected files are indicated by :fontawesome-regular-square-check: and the selected file for baseline correction has a solid orange coloured border.
 
-???+ note
+???+ note "Baseline creation"
     If the `parent-folder` is empty and this is the first time you are processing the file, then after baseline creation you should refresh (:material-refresh:) and move into `DATA` folder.
 
 <figure markdown>
@@ -88,7 +88,7 @@ As shown in above flowchart, the first step is to create a baseline
   <figcaption>Fig 4: Baseline creation</figcaption>
 </figure>
 
-???+ note
+???+ note "Baseline adjustment"
     As shown in Fig 4, the red coloured line is th measured FELIX data.
     While the blue coloured line corresponds to baseline which can be adjusted by dragging the solid-squared-blue-box.
 
@@ -110,6 +110,9 @@ The addition and deletion can be applied when mouse is hovered over the region o
 #### Powerfile
 
 Create powerfile (.pow) for corresponding (.felix) file
+
+???+ warning "Powerfile saving"
+    Don't leave an empty line at the end of the powerfile. It might cause an error.
 
 <figure markdown>
   ![Image title](assets/images/normline/powerfile.jpeg){ align=left }
@@ -136,5 +139,5 @@ As shown above, once baseline is created click on `FELIX plot` button to analysi
 graph LR
   opomode[OPO MODE] --> baseline[Create baseline] --> opo[OPO plot] --> post-process
 ```
-
-### Theory
+<!-- 
+### Theory -->
