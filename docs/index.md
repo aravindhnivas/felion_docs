@@ -11,18 +11,30 @@ The software is developed by [A.N. Marimuthu](https://github.com/aravindhnivas){
 
 ## Download `feliongui`
 
-<!-- Latest version:  -->
+`feliongui` is available for Windows, macOS, and Linux. You can download the installer for your operating system from the link below.
 
-[:simple-windows: Windows (x86_64)](#){ .md-button #download-btn-win .download-btn .windows}
-[:simple-apple: macOS (x86_64)](#){ .md-button #download-btn-macos .download-btn .macos}
-[:simple-linux: Linux (x86_64)](#){ .md-button #download-btn-linux .download-btn .linux}
+[:simple-windows: Windows <span id='feliongui-win'></span>](#){ .md-button #download-btn-win .feliongui-download-btn .windows}
+[:simple-apple: macOS <span id='feliongui-darwin'></span>](#){ .md-button #download-btn-macos .feliongui-download-btn .macos}
+[:simple-linux: Linux <span id='feliongui-linux'></span>](#){ .md-button #download-btn-linux .feliongui-download-btn .linux}
+
+Optionally, you can download the `felionpy` python assets as shown below.
+
+???+ info "Download `felionpy` (optional)"
+    `felionpy` (python assets for `feliongui`) is required for running the application.
+    The download will happen automatically when you run the application for the first time.
+    So, make sure you have an active internet connection.
+
+## Download `felionpy` (optional)
+
+If you want to download the `felionpy` assets manually, you can download it from the link below.
+
+- [:simple-windows: Windows <span id='felionpy-win'></span>](#){ #felionpy-download-btn-win .felionpy-download-btn .windows}
+- [:simple-apple: macOS <span id='felionpy-darwin'></span>](#){ #felionpy-download-btn-macos .felionpy-download-btn .macos}
+- [:simple-linux: Linux <span id='felionpy-linux'></span>](#){ #felionpy-download-btn-linux .felionpy-download-btn .linux}
 
 ## Installation
 
 The installation is very simple. Just download the appropriate installer for your operating system and run it. The installer will guide you through the installation process.
-
-???+ note
-    The application will download `felionpy` assets (i.e., python files for running the application). So, make sure you have an active internet connection.
 
 Follow the addition instruction below for your operating system.
 
@@ -59,7 +71,7 @@ Follow the addition instruction below for your operating system.
     The `.appimage` file is a portable application that can be run on any Linux distribution. However, you will need to make the file executable before running it. To do this, open a terminal and run the following command:
 
     ```bash title="Make the file executable"  
-    chmod +x feliongui_<replace here your version number>_amd64.AppImage
+    chmod +x feliongui_*_amd64.AppImage
     ```
 
 ## Home Screen

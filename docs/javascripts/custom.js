@@ -1,46 +1,73 @@
-let jsonData = null // global variable to store the json data
-const init = async () => {
-    const URL = "https://api.github.com/repos/aravindhnivas/felion_gui_v4/releases/latest"
-    const data = await fetch(URL, {method: "GET"})
-    jsonData = await data.json()
-
-    const versionTag = document.getElementById("version-tag")
-    if(!versionTag) return
-
-    versionTag.textContent = jsonData.tag_name
+const URLs = {
+    feliongui: "https://api.github.com/repos/aravindhnivas/felion_gui_v4/releases/latest",
+    felionpy: "https://api.github.com/repos/aravindhnivas/felionpy/releases/latest"
 }
 
-// init().then(() => {
-//     console.log("github api called")
-//     const versionInfoDivs = Array.from(document.getElementsByClassName("version-info"))
-//     versionInfoDivs.forEach(element =>{element.textContent = jsonData.tag_name.replace('v', '')})
-// }).catch((err) => {console.error(err)})
-
-const getURLs = async () => {
-    
-    if(!jsonData) await init()
-
-    const winAsset = jsonData.assets.find(asset => asset.name.endsWith(".msi"))
-    const dmgAsset = jsonData.assets.find(asset => asset.name.endsWith(".dmg"))
-    const appImageAsset = jsonData.assets.find(asset => asset.name.endsWith(".AppImage"))
-    const winURL = winAsset.browser_download_url    
-    const dmgURL = dmgAsset.browser_download_url    
-    const appImageURL = appImageAsset.browser_download_url
-    return {winURL, dmgURL, appImageURL}
-}
-
-const downloadBtn = document.getElementsByClassName("download-btn")
-Array.from(downloadBtn).forEach(element => {
-    element.onclick =  async (e) => {
-        e.preventDefault();
-        // console.log("clicked")
-        const {winURL, dmgURL, appImageURL} = await getURLs()
-        if(element.classList.contains('windows')) {
-            window.location.href = winURL
-        } else if (element.classList.contains('macos')) {
-            window.location.href = dmgURL
-        } else {
-            window.location.href = appImageURL
-        }
+const data_types = {
+    feliongui: {
+        win: {url: '', size: '', endsWith: '.msi'},
+        darwin: {url: '', size: '', endsWith: '.dmg'},
+        linux: {url: '', size: '', endsWith: '.AppImage'}
+    },
+    felionpy: {
+        win: {url: '', size: '', endsWith: 'win32.zip'},
+        darwin: {url: '', size: '', endsWith: 'darwin.zip'},
+        linux: {url: '', size: '', endsWith: 'linux.zip'}
     }
-});
+}
+
+const OS = ["win", "darwin", "linux"]
+
+const init = async () => {
+
+    const keys = Object.keys(URLs)
+
+    for (const key of keys) {
+        const download_btn = Array.from(document.getElementsByClassName(key + "-download-btn"))
+        if(download_btn.length < 1) continue
+        
+        await set_url_and_size(key)
+        
+        OS.forEach(os => {
+            const span = document.getElementById(`${key}-${os}`)
+            if(!span) return
+            let append = ''
+            if(key === 'feliongui') append = data_types[key][os].endsWith + ', '
+            span.textContent = `(${append}${data_types[key][os].size} MB)`
+        })
+
+        download_btn.forEach(element => {
+            element.onclick =  (e) => {
+                e.preventDefault();
+                if(element.classList.contains('windows')) {
+                    window.location.href = felionpy_urls.win
+                } else if (element.classList.contains('macos')) {
+                    window.location.href = felionpy_urls.darwin
+                } else {
+                    window.location.href = felionpy_urls.linux
+                }
+            }
+        });
+    }
+}
+
+const set_url_and_size = async (key = 'feliongui') => {
+
+    const URL = URLs[key]
+    const data = await fetch(URL, {method: "GET"})
+    const json = await data.json()
+    
+    const win_asset = json.assets.find(asset => asset.name.endsWith(data_types[key].win.endsWith))
+    const dmg_asset = json.assets.find(asset => asset.name.endsWith(data_types[key].darwin.endsWith))
+    const linux_asset = json.assets.find(asset => asset.name.endsWith(data_types[key].linux.endsWith))
+
+    data_types[key].win.url = win_asset.browser_download_url    
+    data_types[key].darwin.url = dmg_asset.browser_download_url    
+    data_types[key].linux.url = linux_asset.browser_download_url
+
+    data_types[key].win.size = Number(win_asset.size / 1024 / 1024).toFixed(0)
+    data_types[key].darwin.size = Number(dmg_asset.size / 1024 / 1024).toFixed(0)
+    data_types[key].linux.size = Number(linux_asset.size / 1024 / 1024).toFixed(0)
+}
+
+init()

@@ -24,7 +24,7 @@ theme:
     
   palette:
 
-    # Palette toggle for automatic mode
+    # # Palette toggle for automatic mode
     # - media: "(prefers-color-scheme)"
     #   toggle:
     #     icon: material/brightness-auto
