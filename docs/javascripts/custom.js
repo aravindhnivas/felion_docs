@@ -23,31 +23,28 @@ const init = async () => {
     const keys = Object.keys(URLs)
 
     for (const key of keys) {
-        const download_btn = Array.from(document.getElementsByClassName(key + "-download-btn"))
-        if(download_btn.length < 1) continue
+        const download = Array.from(document.getElementsByClassName(key + "-download-btn"))
+        if(download.length < 1) continue
         
         await set_url_and_size(key)
         
         OS.forEach(os => {
             const span = document.getElementById(`${key}-${os}`)
             if(!span) return
+
             let append = ''
+            
             if(key === 'feliongui') append = data_types[key][os].endsWith + ', '
             span.textContent = `(${append}${data_types[key][os].size} MB)`
-        })
 
-        download_btn.forEach(element => {
-            element.onclick =  (e) => {
+            const download_btn = document.getElementById(`${key}-${os}-download-btn`)
+            if(!download_btn) return
+            
+            download_btn.onclick =  (e) => {
                 e.preventDefault();
-                if(element.classList.contains('windows')) {
-                    window.location.href = felionpy_urls.win
-                } else if (element.classList.contains('macos')) {
-                    window.location.href = felionpy_urls.darwin
-                } else {
-                    window.location.href = felionpy_urls.linux
-                }
+                window.location.href = data_types[key][os].url
             }
-        });
+    })
     }
 }
 

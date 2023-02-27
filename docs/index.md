@@ -13,9 +13,9 @@ The software is developed by [A.N. Marimuthu](https://github.com/aravindhnivas){
 
 `feliongui` is available for Windows, macOS, and Linux. You can download the installer for your operating system from the link below.
 
-[:simple-windows: Windows <span id='feliongui-win'></span>](#){ .md-button #download-btn-win .feliongui-download-btn .windows}
-[:simple-apple: macOS <span id='feliongui-darwin'></span>](#){ .md-button #download-btn-macos .feliongui-download-btn .macos}
-[:simple-linux: Linux <span id='feliongui-linux'></span>](#){ .md-button #download-btn-linux .feliongui-download-btn .linux}
+[:simple-windows: Windows <span id='feliongui-win'></span>](#){ .md-button #feliongui-win-download-btn .feliongui-download-btn .win}
+[:simple-apple: macOS <span id='feliongui-darwin'></span>](#){ .md-button #feliongui-darwin-download-btn .feliongui-download-btn .darwin}
+[:simple-linux: Linux <span id='feliongui-linux'></span>](#){ .md-button #feliongui-linux-download-btn .feliongui-download-btn .linux}
 
 Optionally, you can download the `felionpy` python assets as shown below.
 
@@ -28,9 +28,9 @@ Optionally, you can download the `felionpy` python assets as shown below.
 
 If you want to download the `felionpy` assets manually, you can download it from the link below.
 
-- [:simple-windows: Windows <span id='felionpy-win'></span>](#){ #felionpy-download-btn-win .felionpy-download-btn .windows}
-- [:simple-apple: macOS <span id='felionpy-darwin'></span>](#){ #felionpy-download-btn-macos .felionpy-download-btn .macos}
-- [:simple-linux: Linux <span id='felionpy-linux'></span>](#){ #felionpy-download-btn-linux .felionpy-download-btn .linux}
+- [:simple-windows: Windows <span id='felionpy-win'></span>](#){ #felionpy-win-download-btn .felionpy-download-btn .win}
+- [:simple-apple: macOS <span id='felionpy-darwin'></span>](#){ #felionpy-darwin-download-btn .felionpy-download-btn .darwin}
+- [:simple-linux: Linux <span id='felionpy-linux'></span>](#){ #felionpy-linux-download-btn .felionpy-download-btn .linux}
 
 ## Installation
 
