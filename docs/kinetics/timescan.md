@@ -79,3 +79,30 @@ The kinetics page is used to analyze the kinetics of the FELion experiment. The 
   ![Image title](../assets/images/kinetics/timescan/felion_docs_kinetic-plots.png){ align=left }
   <figcaption>Fig 11: Kinetic plots creating window</figcaption>
 </figure>
+
+## Flowchart
+
+```mermaid
+graph TD
+    Kinetics
+
+    Kinetics --> Pre[pre-processing]
+    Kinetics --> Post[post-processing]
+    
+    Pre --> ND[Number density]
+    Pre --> Parameters
+    Pre --> Channels
+
+    ND --> Table[Config Table] --> *.configs.json
+    Parameters --> *.params.json
+    Parameters --> *.fit.json
+    Channels --> *.channels.json
+
+    Post --> Plots
+
+    Plots --> *.processed.json
+    Plots --> *.params.processed.json
+
+    *.processed.json --> *.rateConstants.processed.json[*.rateConstants.processed.json or *.rateConstants.fitted.json]
+    *.params.processed.json --> *.rateConstants.processed.json[*.rateConstants.processed.json or *.rateConstants.fitted.json]
+```
