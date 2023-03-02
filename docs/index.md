@@ -11,6 +11,8 @@ The software is developed by [A.N. Marimuthu](https://github.com/aravindhnivas){
 
 ## Download <code id='feliongui-version'></code>
 
+<span style='color: red;' id='download-link-warning'> fetching download links. Please wait... </span>
+
 `feliongui` is available for Windows, macOS, and Linux. You can download the installer for your operating system from the link below.
 
 [:simple-windows: Windows <span id='feliongui-win'></span>](#){ .md-button #feliongui-win-download-btn .feliongui-download-btn .win}

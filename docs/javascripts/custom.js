@@ -53,6 +53,7 @@ const init = async () => {
             download_btn.setAttribute('href', data_types[key][os].url)
             download_btn.setAttribute('target', '_blank')
         })
+        document.getElementById("download-link-warning").textContent =""
     }
 }
 
