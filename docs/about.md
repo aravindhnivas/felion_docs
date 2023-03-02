@@ -57,7 +57,7 @@ A modern JavaScript utility library delivering modularity, performance & extras
 
 Animated icons by Lordicon.com
 
-### Animate.css [:material-open-in-new:](undefined){:target="_blank"}
+### Animate.css [:material-open-in-new:](https://animate.style/){:target="_blank"}
 
 Just-add-water CSS animations
 

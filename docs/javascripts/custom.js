@@ -44,18 +44,15 @@ const init = async () => {
             if(!span) return
 
             let append = ''
-            
             if(key === 'feliongui') append = data_types[key][os].endsWith + ', '
             span.textContent = `(${append}${data_types[key][os].size} MB)`
 
             const download_btn = document.getElementById(`${key}-${os}-download-btn`)
             if(!download_btn) return
-            
-            download_btn.onclick =  (e) => {
-                e.preventDefault();
-                window.location.href = data_types[key][os].url
-            }
-    })
+
+            download_btn.setAttribute('href', data_types[key][os].url)
+            download_btn.setAttribute('target', '_blank')
+        })
     }
 }
 
