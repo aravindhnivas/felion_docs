@@ -86,17 +86,19 @@ The kinetics page is used to analyze the kinetics of the FELion experiment. The 
 graph TD
     Kinetics
 
-    Kinetics --> Pre[pre-processing]
+    Kinetics --> processing
     Kinetics --> Post[post-processing]
     
-    Pre --> ND[Number density]
-    Pre --> Parameters
-    Pre --> Channels
+    processing --> ND[Number density]
+    processing --> Parameters
+    processing --> Channels
+    processing --> Code[Compute code]
 
     ND --> Table[Config Table] --> *.configs.json
     Parameters --> *.params.json
     Parameters --> *.fit.json
     Channels --> *.channels.json
+    Code --> Fit[Fit and save] --> *.fit.json
 
     Post --> Plots
 
