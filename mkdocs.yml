@@ -10,7 +10,7 @@ theme:
   name: material
   favicon: img/favicon.ico
   logo: img/logo.png
-  
+
   icon:
     repo: fontawesome/brands/github
   custom_dir: overrides
@@ -21,9 +21,8 @@ theme:
     - search.share
     - search.suggest
     # - announce.dismiss
-    
-  palette:
 
+  palette:
     # # Palette toggle for automatic mode
     # - media: "(prefers-color-scheme)"
     #   toggle:
@@ -32,7 +31,7 @@ theme:
 
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
-      scheme: default 
+      scheme: default
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
@@ -45,20 +44,20 @@ theme:
         name: Switch to system preference
 
 nav:
-    - index.md
-    - layout.md
-    - normline.md
-    - masspec.md
-    - timescan.md
-    - thz.md
-    - Kinetics:
+  - index.md
+  - layout.md
+  - normline.md
+  - masspec.md
+  - timescan.md
+  - thz.md
+  - Kinetics:
       - kinetics/ROSAA.md
       - kinetics/timescan.md
-    # - powerfile.md
-    - misc.md
-    - settings.md
-    - about.md
-    
+  # - powerfile.md
+  # - misc.md
+  - settings.md
+  - about.md
+
 markdown_extensions:
   - attr_list
   - md_in_html
@@ -82,10 +81,9 @@ markdown_extensions:
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed:
-      alternate_style: true 
-  
-extra:
+      alternate_style: true
 
+extra:
   generator: true # Made with Material for MkDocs notice
   social:
     - icon: fontawesome/solid/paper-plane
